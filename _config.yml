@@ -29,7 +29,7 @@ url: "https://jeanres.dev" # the base hostname & protocol for your site, e.g. ht
 github_username: jeanres
 
 # Build settings
-theme: plainwhite
+theme: samarsault/plainwhite-jekyll
 plugins:
   - jekyll-feed
 
