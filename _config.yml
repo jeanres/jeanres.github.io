@@ -33,10 +33,11 @@ theme: minima
 plugins:
   - jekyll-feed
 
-remote_theme: samarsault/texture
+remote_theme: samarsault/plainwhite-jekyll
+
 
 show_excerpts: true
-texture:
+plainwhite:
   title: Jeanre Swanepoel
   tagline: Architect. Engineer. Geek
   date_format: "%b %-d, %Y"
