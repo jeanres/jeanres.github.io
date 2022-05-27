@@ -17,5 +17,3 @@ function change_node_version {
 
 chpwd_functions=(change_node_version)
 ```
-
-The above function checks for a `.nvmrc` in the directory, and switches to that node version.
