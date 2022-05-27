@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Damn! I am using the wrong version of node
+title: Damn! I am using the wrong node version
 date: 2022-05-27 11:12 +0200
 ---
 
