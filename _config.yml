@@ -29,7 +29,7 @@ url: "https://jeanres.dev" # the base hostname & protocol for your site, e.g. ht
 github_username: jeanres
 
 # Build settings
-theme: minima
+theme: plainwhite
 plugins:
   - jekyll-feed
 
@@ -41,10 +41,10 @@ plainwhite:
   title: Jeanre Swanepoel
   tagline: Architect. Engineer. Geek
   date_format: "%b %-d, %Y"
-  style: blue
   social_links:
     github:  jeanres
     linkedIn: in/jeanre.swanepoel # format: locale/username
+  portfolio_image:  "assets/portfolio.png"
   showNav: true
   navigation:
     - title: Home
