@@ -33,6 +33,23 @@ theme: minima
 plugins:
   - jekyll-feed
 
+remote_theme: samarsault/texture
+
+show_excerpts: true
+texture:
+  title: Jeanre Swanepoel
+  tagline: Architect. Engineer. Geek
+  date_format: "%b %-d, %Y"
+  style: blue
+  social_links:
+    github:  jeanres
+    linkedIn: in/jeanre.swanepoel # format: locale/username
+  showNav: true
+  navigation:
+    - title: Home
+      url: "/"
+    - title: Resumé
+      url: "/resume"
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
