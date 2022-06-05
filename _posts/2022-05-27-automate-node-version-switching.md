@@ -4,7 +4,7 @@ title: Damn! I am using the wrong node version
 date: 2022-05-27 11:12 +0200
 ---
 
-We all have projects that run require different node versions, and most of us already use nvm. I use this function in my `.zshrc` to switch to the correct version of node by reading the `.nvmrc` of the directory I am in.
+We all have projects that require different node versions, and most of us already use nvm. I use this function in my `.zshrc` to switch to the correct version of node by reading the `.nvmrc` of the directory I am in.
 
 ```zsh
 function change_node_version {
