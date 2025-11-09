@@ -1,6 +1,4 @@
-# Swanepoel
-
-Senior Software Architecture Consultant specializing in full-stack system design, cloud infrastructure, and DevOps automation. With over a decade of experience architecting and delivering enterprise-scale solutions across diverse technology stacks.
+Hi, I am a Senior Software Architecture Consultant specializing in full-stack system design, cloud infrastructure, and DevOps automation. With over a decade of experience architecting and delivering enterprise-scale solutions across diverse technology stacks.
 
 ## Technical Expertise
 
