@@ -44,6 +44,3 @@ I am a seasoned Senior Software Architecture Consultant with over two decades of
 - **[Resume](./resume)**: Detailed professional background and project portfolio
 - **[Blog](./blog)**: Technical insights, architecture patterns, and industry commentary
 - **[Podcasts](./podcasts)**: Discussions on software architecture, cloud trends, and technology leadership
-
-### Let's Connect
-I'm passionate about solving complex technical challenges and helping organizations build robust, scalable systems. Feel free to reach out for consulting opportunities, technical discussions, or collaborative projects.
