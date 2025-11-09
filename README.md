@@ -10,7 +10,7 @@ Hi, I am a Senior Software Architecture Consultant specializing in full-stack sy
 - Microfrontend architecture patterns
 
 **Engineering & Development**
-- Multi-language proficiency: Ruby/Rails, Node.js, C#/.NET, React
+- Multi-language proficiency
 - Container orchestration with Docker and Kubernetes
 - CI/CD pipeline design and automation
 - Database design (SQL, NoSQL, caching strategies)
