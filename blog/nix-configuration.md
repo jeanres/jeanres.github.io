@@ -21,8 +21,8 @@ My configuration uses a combination of:
 
 ```
 ~/.nix-config/
-├── flake.nix              # Entry point and dependencies
-├── home/                  # Home-manager configurations
+├── flake.nix             # Entry point and dependencies
+├── home/                 # Home-manager configurations
 │   ├── default.nix       # Main home configuration
 │   ├── core.nix          # Core packages and settings
 │   ├── neovim.nix        # Neovim setup
