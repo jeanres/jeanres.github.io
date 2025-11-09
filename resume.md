@@ -1,8 +1,3 @@
-# Jean Rescalvo
-## Senior Solutions Architect
-
-I am a seasoned Senior Solutions Architect with over two decades of experience architecting and delivering enterprise-scale solutions across diverse technology stacks. My expertise spans full-stack system design, cloud infrastructure, and DevOps automation, helping organizations transform their technical capabilities and achieve strategic business objectives.
-
 ## Core Competencies
 
 ### **Strategic Architecture & Systems Design**
