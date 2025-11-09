@@ -26,8 +26,11 @@ My configuration uses a combination of:
 │   ├── default.nix       # Main home configuration
 │   ├── core.nix          # Core packages and settings
 │   ├── neovim.nix        # Neovim setup
+│   ├── zsh.nix           # Shell configuration
+│   ├── git.nix           # Git configuration
+│   ├── tmux.nix          # Terminal multiplexer
 │   ├── kitty.nix         # Terminal configuration
-│   └── ...               # Other application configs
+│   └── aerospace.nix     # Window manager
 ├── modules/              # System modules
 │   └── homebrew.nix      # Homebrew integration
 ├── systems/              # System-specific configs
@@ -82,146 +85,254 @@ The `flake.nix` serves as the entry point, defining inputs and outputs:
 }
 ```
 
-Key features of this setup:
-- **Flake inputs**: Using nixpkgs-unstable for latest packages
-- **Input following**: Ensures consistent versions across dependencies
-- **Special arguments**: Passing variables to all modules
-- **Modular structure**: Separate concerns into different files
+## Core Development Tools
 
-## Home Manager Configuration
-
-The home configuration is modular, with each application having its own file:
+My core development environment includes essential CLI tools:
 
 ```nix
-# home/default.nix
-{ inputs, pkgs, vars, ... }:
-
+# home/core.nix
 {
-  imports = [
-    ./core.nix
-    ./bat.nix
-    ./zsh.nix
-    ./git.nix
-    ./tmux.nix
-    ./kitty.nix
-    ./neovim.nix
-    ./aerospace.nix
-  ];
-
-  home = {
-    homeDirectory = vars.homeDirectory;
-    stateVersion = "24.05";
+  home.shellAliases = {
+    cd = "z";
   };
-
-  programs.home-manager.enable = true;
-  programs.direnv = {
+  programs.ripgrep.enable = true;
+  programs.fd.enable = true;
+  programs.jq.enable = true;
+  programs.eza.enable = true;
+  programs.htop.enable = true;
+  programs.fzf.enable = true;
+  programs.zoxide = {
     enable = true;
-    nix-direnv.enable = true;
     enableZshIntegration = true;
   };
-  programs.htop.enable = true;
-  programs.yazi.enable = true;
-  programs.lazysql.enable = true;
-  programs.lazydocker.enable = true;
+  programs.tealdeer.enable = true;
 }
 ```
 
-### Neovim Configuration
+This gives me modern replacements for traditional Unix tools:
+- `ripgrep` for fast searching
+- `fd` for finding files
+- `eza` for better `ls` output
+- `zoxide` for smart directory navigation
+- `fzf` for fuzzy finding
 
-My Neovim setup is particularly comprehensive, with Lua-based configuration:
+## Shell Configuration
+
+I use Zsh with several enhancements:
+
+```nix
+# home/zsh.nix
+{...}: {
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    defaultKeymap = "viins";
+    shellAliases = {
+      dr = "sudo darwin-rebuild switch --flake .#Jeanres-MacBook-Pro";
+      cat = "bat";
+    };
+  };
+
+  programs.carapace = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+}
+```
+
+Key features:
+- Vi mode for Zsh
+- Starship prompt for better visual feedback
+- Carapace for enhanced completions
+- Quick rebuild alias (`dr`)
+
+## Neovim Configuration
+
+My Neovim setup uses the latest Lua-based configuration with lazy.nvim:
 
 ```nix
 # home/neovim.nix
 { pkgs, ... }:
-
 {
   programs.neovim = {
     enable = true;
     defaultEditor = true;
-    viAlias = true;
     vimAlias = true;
-    
-    extraPackages = with pkgs; [
-      lua-language-server
-      nixd
-      marksman
-      typescript-language-server
-      ruby-lsp
-      roslyn
-    ];
+    package = pkgs.neovim-unwrapped;
   };
-  
-  home.file.".config/nvim" = {
-    source = ./neovim;
-    recursive = true;
+
+  xdg.configFile = {
+    "nvim/init.lua" = {
+      source = ./neovim/init.lua;
+    };
+    "nvim/lua" = {
+      source = ./neovim/lua;
+      recursive = true;
+    };
+    "nvim/lsp" = {
+      source = ./neovim/lsp;
+      recursive = true;
+    };
   };
 }
 ```
 
-The Lua configuration is structured with:
-- **Core setup**: Basic editor configuration
-- **Plugin management**: Using lazy.nvim for efficient plugin loading
-- **LSP configuration**: Language servers for multiple languages
-- **Custom plugins**: Individual files for each plugin configuration
+The Lua configuration includes:
+- **LSP support**: lua_ls, nixd, roslyn_ls, ruby_ls, ts_ls, marksman
+- **Plugin management**: lazy.nvim for efficient loading
+- **Modern plugins**: blink-cmp, telescope, oil, gitsigns, treesitter
+- **Debugging**: nvim-dap with UI integration
 
-## System Integration
+## Git Configuration
 
-### Homebrew Integration
+My Git setup is optimized for modern workflows:
 
-For GUI applications not available in Nix, I use Homebrew integration:
+```nix
+# home/git.nix
+{ vars, ... }:
+{
+  programs.git = {
+    enable = true;
+    settings = {
+      user = {
+        email = vars.email;
+        name = vars.name;
+      };
+      alias = {
+        co = "checkout";
+        ci = "commit";
+        di = "diff";
+        dc = "diff --cached";
+        fa = "fetch --all";
+        pf = "push --force-with-lease";
+      };
+      init = {
+        defaultBranch = "main";
+      };
+      pull = {
+        rebase = true;
+      };
+      rebase = {
+        autoSquash = true;
+        autoStash = true;
+      };
+    };
+  };
+}
+```
+
+## Terminal Multiplexer (Tmux)
+
+My Tmux configuration is feature-rich with plugins:
+
+```nix
+# home/tmux.nix
+{ pkgs, ... }:
+{
+  programs.tmux = {
+    enable = true;
+    baseIndex = 1;
+    plugins = with pkgs; [
+      tmuxPlugins.vim-tmux-navigator
+      tmuxPlugins.resurrect
+      tmuxPlugins.continuum
+      tmuxPlugins.catppuccin
+      tmuxPlugins.battery
+      tmuxPlugins.online-status
+    ];
+  };
+}
+```
+
+Key features:
+- Vim-style navigation
+- Session persistence with resurrect/continuum
+- Catppuccin theme
+- Battery and online status indicators
+- Popup windows for lazygit and session switching
+
+## Homebrew Integration
+
+For GUI applications, I use Homebrew integration:
 
 ```nix
 # modules/homebrew.nix
-{ pkgs, config, ... }:
-
+{ ... }:
 {
   homebrew = {
     enable = true;
     onActivation = {
       autoUpdate = true;
-      cleanup = "uninstall";
+      upgrade = true;
+      cleanup = "zap";
     };
-    
+
     taps = [
-      "homebrew/cask"
-      "homebrew/core"
+      "nikitabobko/tap"
+      "vladdoster/formulae"
     ];
-    
+
     brews = [
-      "docker"
+      "reattach-to-user-namespace"
+      "opencode"
     ];
-    
+
     casks = [
-      "tableplus"
-      "obs"
-      "obs-ndi"
-      "vimari"
+      "kitty"
+      "docker-desktop"
+      "aerospace"
+      "font-jetbrains-mono-nerd-font"
+      "slack"
+      "microsoft-teams"
+      "utm"
+      "discord"
     ];
   };
 }
 ```
 
-### System Configuration
+## System Configuration
 
 The macOS system settings are managed through `systems/darwin.nix`:
 
 ```nix
+# systems/darwin.nix
 { pkgs, vars, ... }:
-
 {
-  environment.systemPackages = with pkgs; [
-    git
-    vim
-  ];
-  
+  nix = {
+    package = pkgs.nixVersions.latest;
+    extraOptions = ''
+      extra-platforms = x86_64-darwin
+      experimental-features = nix-command flakes
+    '';
+    gc = {
+      automatic = true;
+      interval = { Weekday = 0; Hour = 0; Minute = 0; };
+      options = "--delete-older-than 30d";
+    };
+  };
+
+  security.pam.services.sudo_local.touchIdAuth = true;
+  services.openssh.enable = true;
+
   system = {
-    stateVersion = 4;
     defaults = {
-      NSGlobalDomain = {
-        AppleShowAllExtensions = true;
-        KeyRepeat = 2;
-        InitialKeyRepeat = 15;
+      screencapture = {
+        location = "~/Documents/Screenshots";
       };
+      dock = {
+        mru-spaces = false;
+        autohide = true;
+      };
+    };
+    keyboard = {
+      enableKeyMapping = true;
+      remapCapsLockToEscape = true;
     };
   };
 }
@@ -239,10 +350,10 @@ The macOS system settings are managed through `systems/darwin.nix`:
 - No manual installation steps
 - Clear dependency relationships
 
-### 3. Modularity
-- Separate concerns into logical modules
-- Easy to add/remove components
-- Reusable across different setups
+### 3. Modern Tooling
+- Latest versions of all tools
+- Modern replacements for traditional Unix tools
+- Efficient workflows with aliases and integrations
 
 ### 4. Cross-Platform Potential
 - Similar structure works for NixOS
@@ -253,7 +364,7 @@ The macOS system settings are managed through `systems/darwin.nix`:
 
 ### Making Changes
 1. Edit configuration files in `~/.nix-config/`
-2. Run `darwin-rebuild switch --flake .`
+2. Run `dr` (alias for `darwin-rebuild switch --flake .`)
 3. Changes are applied atomically
 
 ### Adding New Tools
@@ -266,29 +377,11 @@ The macOS system settings are managed through `systems/darwin.nix`:
 - Track changes over time
 - Share configurations across teams
 
-## Challenges and Solutions
-
-### Challenge: GUI Applications
-**Solution**: Homebrew integration for applications not in Nix
-
-### Challenge: macOS System Settings
-**Solution**: nix-darwin provides system-level configuration options
-
-### Challenge: Learning Curve
-**Solution**: Start simple, gradually add complexity
-
-## Future Improvements
-
-1. **Secrets Management**: Integrate with sops-nix for sensitive data
-2. **Multi-Machine Support**: Extend configuration for different use cases
-3. **Automated Testing**: Add configuration validation
-4. **Documentation**: Enhance inline documentation
-
 ## Conclusion
 
 This Nix configuration provides a robust, reproducible development environment that scales across different projects and machines. The modular structure makes it easy to maintain and extend, while the declarative approach ensures consistency and reduces manual configuration errors.
 
-For anyone looking to improve their development environment management, I highly recommend exploring Nix and the ecosystem around it. The initial investment in learning pays dividends in long-term productivity and reliability.
+The combination of modern CLI tools, a powerful Neovim setup, and comprehensive system management creates an efficient development environment that adapts to my needs as a software architecture consultant.
 
 ---
 
