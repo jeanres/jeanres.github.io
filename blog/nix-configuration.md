@@ -381,7 +381,7 @@ The macOS system settings are managed through `systems/darwin.nix`:
 
 This Nix configuration provides a robust, reproducible development environment that scales across different projects and machines. The modular structure makes it easy to maintain and extend, while the declarative approach ensures consistency and reduces manual configuration errors.
 
-The combination of modern CLI tools, a powerful Neovim setup, and comprehensive system management creates an efficient development environment that adapts to my needs as a senior solutions architect.
+The combination of modern CLI tools, a powerful Neovim setup, and comprehensive system management creates an efficient development environment that adapts to my needs. 
 
 ---
 
