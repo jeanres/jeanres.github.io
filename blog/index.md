@@ -5,7 +5,7 @@ description: "Technical insights, architecture patterns, and industry commentary
 
 # Blog
 
-Welcome to my technical blog where I share insights on software architecture, cloud infrastructure, DevOps practices, and emerging technologies.
+Welcome to my technical blog where I share insights on solutions architecture, cloud infrastructure, DevOps practices, and emerging technologies.
 
 ## Recent Posts
 

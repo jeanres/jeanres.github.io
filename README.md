@@ -1,4 +1,4 @@
-I am a seasoned Senior Software Architecture Consultant with over two decades of experience architecting and delivering enterprise-scale solutions across diverse technology stacks. My expertise spans full-stack system design, cloud infrastructure, and DevOps automation, helping organizations transform their technical capabilities and achieve strategic business objectives.
+I am a seasoned Senior Solutions Architect with over two decades of experience architecting and delivering enterprise-scale solutions across diverse technology stacks. My expertise spans full-stack system design, cloud infrastructure, and DevOps automation, helping organizations transform their technical capabilities and achieve strategic business objectives.
 
 ## Core Competencies
 
@@ -43,4 +43,4 @@ I am a seasoned Senior Software Architecture Consultant with over two decades of
 
 - **[Resume](./resume)**: Detailed professional background and project portfolio
 - **[Blog](./blog)**: Technical insights, architecture patterns, and industry commentary
-- **[Podcasts](./podcasts)**: Discussions on software architecture, cloud trends, and technology leadership
+- **[Podcasts](./podcasts)**: Discussions on solutions architecture, cloud trends, and technology leadership
