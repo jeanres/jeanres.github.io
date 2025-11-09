@@ -1,10 +1,33 @@
-# Jean Res Swanepoel
+# Swanepoel
 
-Hello, World. I'm Jeanre Swanepoel - a Software Development Consultant & Technology Generalist.
+Senior Software Architecture Consultant specializing in full-stack system design, cloud infrastructure, and DevOps automation. With over a decade of experience architecting and delivering enterprise-scale solutions across diverse technology stacks.
 
-I am a freelance software development consultant from Cape Town, South Africa with over a decade of experience building large-scale software products. As a technology generalist, I bridge the gap between architecture, engineering, and DevOps, focusing on security, scalability, and robust system design.
+## Technical Expertise
 
-My approach is to use the best tool for the job, consulting across the entire software development lifecycle - from initial architecture and system design to deployment procedures and infrastructure management. I specialize in re-architecting legacy systems, implementing modern cloud architectures, and leading development teams through complex technical challenges.
+**Architecture & Systems Design**
+- Microservices architecture and distributed systems
+- Cloud-native patterns and serverless implementations
+- Legacy system modernization and migration strategies
+- GraphQL API design and implementation
+- Microfrontend architecture patterns
+
+**Engineering & Development**
+- Multi-language proficiency: Ruby/Rails, Node.js, C#/.NET, React
+- Container orchestration with Docker and Kubernetes
+- CI/CD pipeline design and automation
+- Database design (SQL, NoSQL, caching strategies)
+- Message queuing and event-driven architectures
+
+**DevOps & Infrastructure**
+- AWS cloud architecture and serverless computing
+- Infrastructure as Code (IaC) implementations
+- Monitoring, logging, and observability solutions
+- Security best practices and compliance frameworks
+- Performance optimization and scalability planning
+
+## Consulting Focus
+
+I provide end-to-end technical consulting across the software development lifecycle, from initial system architecture through deployment and operational excellence. My approach emphasizes technology-agnostic solutions, selecting optimal tools and frameworks based on specific business requirements and constraints.
 
 ## Sections
 
