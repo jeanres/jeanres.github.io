@@ -6,7 +6,7 @@ Hi, I am a Senior Software Architecture Consultant specializing in full-stack sy
 - Microservices architecture and distributed systems
 - Cloud-native patterns and serverless implementations
 - Legacy system modernization and migration strategies
-- GraphQL API design and implementation
+- API design and implementation
 - Microfrontend architecture patterns
 
 **Engineering & Development**
@@ -17,7 +17,7 @@ Hi, I am a Senior Software Architecture Consultant specializing in full-stack sy
 - Message queuing and event-driven architectures
 
 **DevOps & Infrastructure**
-- AWS cloud architecture and serverless computing
+- Cloud architecture and serverless computing
 - Infrastructure as Code (IaC) implementations
 - Monitoring, logging, and observability solutions
 - Security best practices and compliance frameworks
