@@ -9,3 +9,7 @@ For my complete professional background, skills, and experience, please view my 
 - **[Blog](./blog)**: Technical insights, architecture patterns, and industry commentary  
 - **[Podcasts](./podcasts)**: Discussions on solutions architecture, cloud trends, and technology leadership
 
+---
+
+**Contact**: jeanre.swanepoel@gmail.com | +27 68 618 3487
+

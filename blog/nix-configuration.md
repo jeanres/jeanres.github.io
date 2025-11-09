@@ -386,3 +386,7 @@ The combination of modern CLI tools, a powerful Neovim setup, and comprehensive 
 ---
 
 *Have questions about my Nix setup or want to share your own configuration patterns? Feel free to reach out or open an issue on the [nix-config repository](https://github.com/jeanres/nix-config).*
+
+---
+
+**Contact**: jeanre.swanepoel@gmail.com | +27 68 618 3487

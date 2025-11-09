@@ -44,3 +44,7 @@
 
 ### Let's Connect
 I'm passionate about solving complex technical challenges and helping organizations build robust, scalable systems. Feel free to reach out for consulting opportunities, technical discussions, or collaborative projects.
+
+---
+
+**Contact**: jeanre.swanepoel@gmail.com | +27 68 618 3487
