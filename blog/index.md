@@ -16,25 +16,4 @@ How I've structured my Nix configuration for a reproducible macOS development en
 
 ---
 
-## Categories
-
-- **Architecture & Design**
-- **Cloud & Infrastructure**
-- **DevOps & Automation**
-- **Development Practices**
-- **Technology Leadership**
-
-## Topics I Cover
-
-- Microservices and distributed systems
-- Cloud-native patterns and serverless architectures
-- CI/CD pipelines and automation
-- Container orchestration and Kubernetes
-- Infrastructure as Code
-- Performance optimization and scalability
-- Security best practices
-- Team leadership and technical strategy
-
----
-
 *Stay tuned for more posts on software architecture, cloud technologies, and engineering best practices. Subscribe to my RSS feed or follow me on social media for updates.*
