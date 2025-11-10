@@ -149,11 +149,6 @@ If you encounter version conflicts, explicitly specify the SDK in your build com
 dotnet build --sdk-version 8.0.408
 ```
 
-### IDE Configuration
-Ensure your IDE is configured to use the correct language server:
-- VS Code: Configure the OmniSharp or C# extension to use the combined SDK path
-- JetBrains Rider: Set the correct MSBuild version in preferences
-
 ## Conclusion
 
 Running .NET 8 applications with .NET 9 SDK tooling provides the best of both worlds: production stability with modern development capabilities. This approach allows you to maintain existing applications while benefiting from the latest tooling improvements.
