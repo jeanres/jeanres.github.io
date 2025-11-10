@@ -9,6 +9,11 @@ Welcome to my technical blog where I share insights on solutions architecture, c
 
 ## Recent Posts
 
+### [Using .NET 8 Applications with .NET 9 SDK via Nix shell.nix Configuration](./dotnet-8-9-roslyn)
+*November 10, 2025*
+
+How to run .NET 8 applications while leveraging the latest .NET 9 SDK features through Nix shell.nix configuration, including Roslyn language server for enhanced development experience. This post covers environment configuration, project setup, and practical workflow examples.
+
 ### [Using Direnv with Nix for Project-Specific Development Environments](./direnv-nix-workflow)
 *November 9, 2025*
 
