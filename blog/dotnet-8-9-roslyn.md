@@ -7,9 +7,9 @@ tags: [".NET", "development-environment", "SDK", "Roslyn", "Nix", "shell.nix"]
 
 # Using .NET 8 Applications with .NET 9 SDK via Nix shell.nix Configuration
 
-As a senior solutions architect working with modern .NET applications, I often encounter scenarios where I need to maintain existing .NET 8 applications while taking advantage of the latest tooling improvements in .NET 9. This is particularly relevant when working with enhanced language servers like Roslyn that benefit from the newer SDK, even when the application itself targets an older framework.
+I often encounter scenarios where I need to maintain existing .NET 8 applications while taking advantage of the latest tooling improvements in .NET 9. This is particularly relevant when working with enhanced language servers like Roslyn that benefit from the newer SDK, even when the application itself targets an older framework.
 
-In this post, I'll share how I've successfully configured my development environment to run .NET 8 applications while leveraging the .NET 9 SDK for improved development tooling.
+In this post, I'll share how to successfully configure your development environment to run .NET 8 applications while leveraging the .NET 9 SDK for improved development tooling.
 
 ## The Challenge
 
