@@ -9,6 +9,11 @@ Welcome to my technical blog where I share insights on solutions architecture, c
 
 ## Recent Posts
 
+### [Jiva: Solving DJ Song Request Chaos](./jiva-dj-request-tool)
+*May 5, 2026*
+
+A tool that lets DJs accept song requests via QR code, automatically downloading tracks from YouTube to Mixxx library without interrupting the set.
+
 ### [Using .NET 8 Applications with .NET 9 SDK via Nix shell.nix Configuration](./dotnet-8-9-roslyn)
 *November 10, 2025*
 
