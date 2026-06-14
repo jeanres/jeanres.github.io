@@ -1,10 +1,7 @@
 ---
 title: "Blog"
-image: ../logo.png
 description: "Technical insights, architecture patterns, and industry commentary"
 ---
-
-![Logo](../logo.png)
 
 # Blog
 
