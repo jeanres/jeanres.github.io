@@ -15,6 +15,4 @@ Guests scan a QR code you display (no app download needed), enter the song name 
 
 It also handles the small stuff that matters: it won't download the same song twice, supports creating event playlists to bulk-download tracks ahead of time, and runs quietly in the background so you can focus on DJing. No more interruptions, no more manual work, just seamless song requests that keep the party going.
 
----
 
-**Contact**: jeanre.swanepoel@gmail.com | +27 68 618 3487

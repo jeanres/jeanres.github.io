@@ -7,14 +7,16 @@ header h1 {
   display: none;
 }
 
-p.view {
-  margin-top: 10px;
+.sidebar-links {
+  margin-top: 15px;
 }
 
-p.view a {
+.sidebar-links a {
+  display: inline-block;
+  margin-right: 8px;
   color: #727272;
 }
 
-p.view a:hover {
+.sidebar-links a:hover {
   color: #069;
 }

@@ -258,6 +258,3 @@ The initial investment in setting up `shell.nix` files pays dividends in reduced
 
 *Have questions about using direnv with Nix, or want to share your own environment management patterns? Feel free to reach out or open an issue on the [nix-config repository](https://github.com/jeanres/nix-config).*
 
----
-
-**Contact**: jeanre.swanepoel@gmail.com | +27 68 618 3487

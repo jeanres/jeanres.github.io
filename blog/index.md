@@ -29,6 +29,4 @@ How I use direnv with Nix to create reproducible, project-specific development e
 
 How I've structured my Nix configuration for a reproducible macOS development environment using nix-darwin and home-manager. This post covers the directory structure, flake architecture, home-manager configuration, and the benefits of this declarative approach to environment management.
 
----
 
-**Contact**: jeanre.swanepoel@gmail.com | +27 68 618 3487
