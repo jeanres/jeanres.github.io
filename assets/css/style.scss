@@ -8,5 +8,13 @@ header h1 {
 }
 
 p.view {
-  display: none;
+  margin-top: 10px;
+}
+
+p.view a {
+  color: #727272;
+}
+
+p.view a:hover {
+  color: #069;
 }
